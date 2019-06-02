@@ -1,3 +1,4 @@
 dev-requirements.txt
+*.egg-info
 .python-version
 *.pyc
