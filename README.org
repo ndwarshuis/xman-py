@@ -1,0 +1,18 @@
+* XMan
+A daemon to manage [[https://github.com/alols/xcape][xcape]] instances when using virtual machines.
+
+Xcape allows one to configure any key to send an arbitrary key upon release (for instance, the Control key can function as itself on keypress and an Escape key on key release).
+
+This works beautifully except when one tries to switch to a virtual machine (VM), particularly a windows machine with an Autohotkey script to replicate the keymap in the host machine. In this case, any xcape'd keys will be sent twice. The obvious/crude solution is to kill xcape when the VM is in focus and respawn it when a host window is in focus. This is what =xman= does.
+
+Currently this package is tailored very closely to my needs (eg my keymap) and thus will need modification for others to use. It also has only been tested with =VirtualBox=.
+* Installation
+Clone this repo and install using pip to the user's path.
+#+BEGIN_SRC sh
+git clone https://github.com/ndwarshuis/xman
+pip install --user -e xman
+#+END_SRC
+* Dependencies
+- xcape (binary)
+- systemd-python
+- python-xlib
