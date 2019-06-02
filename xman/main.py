@@ -212,7 +212,8 @@ def sigterm_handler(signum, stackFrame):
     raise SystemExit
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
+def main():
     # we make the assumption that this script will be started
     # from within X, therefore it only needs to know if there
     # are windows present (and not test for X server running)
